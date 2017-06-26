@@ -9,9 +9,8 @@ Rails.application.routes.draw do
   root :to => "statics#index"
   get '/about' => 'static#about', :as => :about
 
-  resources :peliculas do
-		resources :comentarios
-end
+  resources :peliculas
+  resources :comentarios
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
