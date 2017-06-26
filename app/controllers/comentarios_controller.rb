@@ -39,6 +39,7 @@ else
 render :edit
 end
 end
+
 private
 def comentario_params
 params.require(:comentario).permit(:name, :comment)
