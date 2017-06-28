@@ -32,16 +32,15 @@ end
 
 def update
 	@comentario = Comentario.find(params[:id])
+	if @comentario.update_attributes(comentario_params)
+	redirect_to comentarios_path
+	else
+	render :edit
+	end
+end
 
-if @comentario.update_attributes(comentario_params)
-redirect_to comentarios_path
-else
-render :edit
-end
-end
-
-private
-def comentario_params
-params.require(:comentario).permit(:name, :comment)
-end
+	private
+	def comentario_params
+	params.require(:comentario).permit(:name, :comment)
+	end
 end

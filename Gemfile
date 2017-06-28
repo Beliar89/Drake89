@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 
 
 gem 'coffee-script-source', '1.8.0'
- 
+gem 'better_errors', '~> 2.1', '>= 2.1.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
  
@@ -36,6 +36,7 @@ gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'b
 # gem 'capistrano-rails', group: :development
 gem 'activeadmin', github: 'activeadmin'
 gem 'cancancan', '~> 2.0'
+gem 'rails-i18n'
  
 group :development, :test do
 # Call 'byebug' anywhere in the code to stop execution and get a debugger console
